@@ -1,0 +1,12 @@
+#doctorimg img{
+    width: 100px !important;
+    height: 100px;
+    margin: 0.7rem;
+    border-radius: 100rem;
+}
+#doctorimg{
+    margin-bottom: 1rem;
+}
+.card-title{
+    text-decoration: underline;
+}
