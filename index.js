@@ -19,7 +19,6 @@ const PORT = process.env.PORT || 8000;
 //session
 
 // app.use(bodyParser.json());
-app.use(express.static(process.cwd()+"/client/build/"));
 app.use(session({
   genid: (req) => {
     console.log('Inside the session middleware')
