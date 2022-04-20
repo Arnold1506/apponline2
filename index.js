@@ -47,7 +47,10 @@ db.once('open', function () {
 });
 
 
-
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+  res.send(`Hit home page. Received the unique id: ${uniqueId}\n`)
+});
 
 app.post('/success', (req, err) => {
   let { items } = req.body
@@ -295,11 +298,11 @@ app.get("*", (req, res) => {
 
 app.use(express.static('./client/build'));
 
-app.set('port', process.env.PORT  || 5000);
-console.log("++++++++++" + app.get('port'));
+// app.set('port', process.env.PORT  || 5000);
+// console.log("++++++++++" + app.get('port'));
 
-// app.listen(PORT, () => {
-//   console.log(`Example app listening on PORT ${PORT} !`)
-// });
+app.listen(PORT, () => {
+  console.log(`Example app listening on PORT ${PORT} !`)
+});
 
 
