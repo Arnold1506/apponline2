@@ -15,7 +15,7 @@ const Login = () => {
         let message = '';
         
         localStorage.setItem("id", "1");
-        axios.post('http://localhost:8000/login', { items : user})
+        axios.post('https://apponline2.herokuapp.com/login', { items : user})
         .then(res => { 
                 message = res.data;
                 console.log(res.data);

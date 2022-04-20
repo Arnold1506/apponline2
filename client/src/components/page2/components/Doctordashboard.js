@@ -42,7 +42,7 @@ const Doctordashboard = () => {
             stime: scheduler.stime,
             etime: scheduler.etime
         }]);
-        axios.post('http://localhost:8000/schedule', { schedule: scheduler })
+        axios.post('https://apponline2.herokuapp.com/schedule', { schedule: scheduler })
             .then(res => {
                 console.log(res);
             })
@@ -64,7 +64,7 @@ const Doctordashboard = () => {
             <Modal show={show}
                 onHide={handleClose}
                 backdrop="static"
-                keyboard={false} onHide={handleClose}>
+                keyboard={false} >
                 <Modal.Header closeButton>
                     <Modal.Title>Choose Your Appointment</Modal.Title>
                 </Modal.Header>

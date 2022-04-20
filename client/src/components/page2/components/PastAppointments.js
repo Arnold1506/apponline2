@@ -10,7 +10,7 @@ export default function PastAppointments() {
     const [slots, setSlots] = useState();
 
     useEffect(() => {
-        axios.post('http://localhost:8000/pastappointments', { items: email })
+        axios.post('https://apponline2.herokuapp.com/pastappointments', { items: email })
             .then(res => {
                 setSlots(res.data);
                 console.log(res);

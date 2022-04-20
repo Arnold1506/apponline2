@@ -29,7 +29,7 @@ const SlotModal = (props) => {
   function SubmitSlot(e){
     e.preventDefault();
     
-    axios.post('http://localhost:8000/slotbooking', {items : slot})
+    axios.post('https://apponline2.herokuapp.com/slotbooking', {items : slot})
     .then(res => {
       
     })
@@ -47,7 +47,7 @@ const SlotModal = (props) => {
       <Modal show={show}
         onHide={handleClose}
         backdrop="static"
-        keyboard={false} onHide={handleClose}>
+        keyboard={false} >
         <Modal.Header closeButton>
           <Modal.Title>Dr. {fname} {lname}</Modal.Title>
         </Modal.Header>

@@ -38,7 +38,7 @@ const DoctorSlotModal = (props) => {
             <Modal show={show}
                 onHide={handleClose}
                 backdrop="static"
-                keyboard={false} onHide={handleClose}>
+                keyboard={false}>
                 <Modal.Header closeButton>
                     <Modal.Title>List Of Patients at {stime} - {etime} </Modal.Title>
                 </Modal.Header>

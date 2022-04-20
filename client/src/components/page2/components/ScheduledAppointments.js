@@ -11,7 +11,7 @@ export default function ScheduledAppointments() {
     function submit(e){
         e.preventDefault();
         console.log("ahajjk");
-        axios.post('http://localhost:8000/delete', { items:email })
+        axios.post('https://apponline2.herokuapp.com/delete', { items:email })
         .then(res => {
             alert("deleted");
         })
@@ -21,7 +21,7 @@ export default function ScheduledAppointments() {
     }
 
     useEffect(() => {
-        axios.post('http://localhost:8000/appointments', { items: email })
+        axios.post('https://apponline2.herokuapp.com/appointments', { items: email })
             .then(res => {
                 setSlots(res.data);
                 console.log(res);

@@ -11,7 +11,7 @@ export default function Name() {
     useEffect(() => {
         let mail = localStorage.getItem("email");
         
-        axios.post('http://localhost:8000/name', { items: mail })
+        axios.post('https://apponline2.herokuapp.com/name', { items: mail })
         .then(res => {
             setSlots(res.data[0]);
             console.log(res.data[0].userType);

@@ -28,7 +28,7 @@ const Signup = () => {
       
       console.log(user);
     
-    axios.post('http://localhost:8000/success', { items : user})
+    axios.post('https://apponline2.herokuapp.com/success', { items : user})
     .then(res => { 
             console.log(res);
         })
@@ -56,7 +56,7 @@ const Signup = () => {
                 </div>
                 <div className="d-flex w-50 justify-content-between">
                     <div class="form-check">
-                        <input class="form-check-input" name="" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onClick={() => setUser(prevUser => ({ ...prevUser, ["type"]: "patient" }))} />
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onClick={() => setUser(prevUser => ({ ...prevUser, ["type"]: "patient" }))} />
                         <label class="form-check-label" for="flexRadioDefault1">
                             Patient
                         </label>

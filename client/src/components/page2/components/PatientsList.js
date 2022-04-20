@@ -6,7 +6,7 @@ export default function PatientsList(props) {
         const [pat, setPat] = useState([]);
 
     useEffect(() => {
-        axios.post("http://localhost:8000/patientslist", { items : slotId})
+        axios.post("https://apponline2.herokuapp.com/patientslist", { items : slotId})
         .then(res => { 
             setPat(res.data);
             // console.log(res.data);

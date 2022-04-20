@@ -7,7 +7,7 @@ const BookAppointment = () => {
   const [doctor, setDoctor] = useState([]);
   let history = useHistory();
   useEffect(() => {
-    axios.get("http://localhost:8000/doctorlist")
+    axios.get("https://apponline2.herokuapp.com/doctorlist")
     .then(res =>{ 
       setDoctor(res.data);
       // console.log(doctor);

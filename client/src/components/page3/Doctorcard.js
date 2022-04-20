@@ -18,7 +18,7 @@ const Doctorcard = (props) => {
         width: '50%'
     };
     useEffect(() => {
-        axios.post("http://localhost:8000/slot", { email })
+        axios.post("https://apponline2.herokuapp.com/slot", { email })
             .then(res => {
                 setSlots(res.data.schedules);
                 console.log(res.data);
