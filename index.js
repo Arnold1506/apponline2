@@ -144,14 +144,15 @@ app.post('/login', (req, res) => {
   let query = { email: items.email, password: items.password };
   User.find(query)
     .then(users => {
-      console.log(users, "shravan");
-      if (users) {
+      console.log(users.length, "shravan");
+      if (users.length>0) {
         console.log("rignt matched");
         // console.log(users);
         res.send(users);
       }
       else {
         let mes = "mee";
+        console.log(mes);
         res.send({ mes: mes });
       }
     })

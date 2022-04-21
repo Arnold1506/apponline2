@@ -15,14 +15,16 @@ const Login = () => {
         let message = '';
         
         localStorage.setItem("id", "1");
-        axios.post('https://apponline2.herokuapp.com/login', { items : user})
+        axios.post('http://localhost:8000/login', { items : user})
         .then(res => { 
                 message = res.data;
-                console.log(res.data);
+                console.log(message.mes, "hello");
                 if(message.mes == "mee"){
                         alert("Wrong Email/Password");
                 }
                 else{
+                    console.log(message);
+                    // alert(message[0]);
                     console.log('message');
                     console.log(message[0].userType);
                     // console.log("sda");
@@ -30,7 +32,6 @@ const Login = () => {
                     localStorage.setItem("email", message[0].email);
                     localStorage.setItem("fname", message[0].fname);
                     localStorage.setItem("lname", message[0].lname);
-                    alert(1);
                     if(message[0].userType == 'doctor'){
                         console.log("doctor");
                         history.push("/doctordashboard");
